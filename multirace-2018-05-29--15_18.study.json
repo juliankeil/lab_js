@@ -161,7 +161,7 @@
         ]
       },
       "title": "Ende der Studie",
-      "content": "<style> body {background-color:grey} </style>\n\n  <header><h3> <br><br>Vielen Dank für die Teilnahme an unserer Studie!<br><br><h3></header>\n  <main>\n   <form id=\"form\">\n     <p>Falls Sie uns noch etwas zur Studie mitteilen möchten (wie Fragen, Verbesserungsvorschläge oder generelles Feedback), können Sie dafür gern das folgende Freitextfeld nutzen: </p>\n     <br>\n      <input name=\"feedback\" type=\"text\" style=\"width: 50em;\">\n   </form>\n</main>\n<footer style=\"background-color: grey;\">\n      <button type=\"submit\" form=\"form\">\n        Studie schließen\n      </button>\n\n  </footer>\n",
+      "content": "<style> body {background-color:grey} </style>\n\n  <header><h3> <br><br>Vielen Dank für die Teilnahme an unserer Studie!<br><br><h3></header>\n  <main>\n   <form id=\"form\">\n     <p>Falls Sie uns noch etwas zur Studie mitteilen möchten (wie Fragen, Verbesserungsvorschläge oder generelles Feedback), können Sie dafür gern das folgende Freitextfeld nutzen: </p>\n     <br>\n      <input name=\"feedback\" type=\"text\" style=\"width: 50em;\">\n   </form>\n</main>\n<footer style=\"background-color: grey;\">\n      \n\n  </footer>\n",
       "_tab": "Content",
       "scrollTop": true
     },
@@ -400,7 +400,7 @@
       },
       "title": "Sound Instructions",
       "content": "<style> body {background-color:grey} </style>\n\n<audio id=\"audio\" controls style=\"display:none\">\n  <source src=\"http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3\"> \n</audio>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n <p> Stellen Sie bitte nun bitte sicher, dass Ihre Lautsprecher eingeschaltet sind.</p>\n <p> Sind Ihre Lautsprecher eingeschaltet, drücken Sie bitte die Taste [a], um einen Ton abzuspielen.</p> <p> Stellen Sie die Lautstärke ihrer Lautsprecher bitte so ein, dass der Ton für Sie gut wahrnehmbar, aber nicht zu laut ist. </p>\n <br>\n </main>\n\n<footer style=\"background-color:grey;\">\n   <p>Der Übungsblock startet, sobald Sie die Leertaste drücken.</p> <p> Viel Spaß!</p>\n </footer>\n </div>",
-      "_tab": "Content"
+      "_tab": "Scripts"
     },
     "68": {
       "id": "68",
@@ -1071,7 +1071,7 @@
       },
       "title": "stimulus ",
       "_tab": "Content",
-      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 10rem\"\n    >\n      &#9679;\n    </div>\n  </main>\n</div>\n",
       "timeout": "20"
     },
     "105": {
@@ -1228,7 +1228,7 @@
       },
       "title": "stimulus ",
       "_tab": "Content",
-      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 10rem\"\n    >\n      &#9679;\n    </div>\n  </main>\n</div>\n",
       "timeout": "20"
     },
     "108": {
@@ -1518,7 +1518,7 @@
       },
       "title": "stimulus ",
       "_tab": "Content",
-      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 10rem\"\n    >\n      &#9679;\n    </div>\n  </main>\n</div>\n",
       "timeout": "20"
     },
     "125": {
@@ -1929,7 +1929,7 @@
       },
       "title": "stimulus ",
       "_tab": "Content",
-      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 10rem\"\n    >\n      &#9679;\n    </div>\n  </main>\n</div>\n",
       "timeout": "20"
     },
     "132": {
