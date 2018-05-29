@@ -1,0 +1,2126 @@
+{
+  "version": [
+    2017,
+    1,
+    7
+  ],
+  "components": {
+    "1": {
+      "id": "1",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Enter"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Pause Ende",
+      "_tab": "Content",
+      "content": "<header> <h3>Vielen Dank!</h3> </header>\n<main>\n<p>Das Experiment ist nun zu Ende. Bitte beantworten Sie uns auf den folgenden Seiten noch einige abschliessende Fragen. </p>\n</main>\n<footer style=\"background-color: grey;\">\n<p>Drücken Sie bitte Enter, um zum nächsten Block zu gelangen.</p>\n</footer>",
+      "scrollTop": true
+    },
+    "7": {
+      "id": "7",
+      "type": "lab.html.Form",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Demographics",
+      "content": "<style> body {background-color:grey} </style>\n\n<header>\n  <h3>Demographische Daten</h3>\n</header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n<div class=\"w-m text-justify\">\n<p>Bevor das Experiment beginnt, möchten wir Ihnen noch einige Fragen zu Ihrer Person stellen. Wir möchten Sie erneut darauf aufmerksam machen, dass Ihre Antworten in verschlüsselter Form verarbeitet und gespeichert werden, dementsprechend also keine Rückschlüsse auf Sie als Versuchsperson möglich sind. Bitte antworten Sie wahrheitsgemäß. </p>\n  <form id=\"form\">\n    <table class=\"table-plain\">      \n      <tr>\n        <th style=\"text-align: right;\">\n          Mit welchem Geschlecht würden Sie sich am ehesten identifizieren? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"Geschlecht\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"g_male\"> männlich </option>\n            <option value=\"g_female\"> weiblich </option>\n            <option value=\"g_nonbinary\"> nicht binär </option>\n            <option value=\"g_noresp\"> keine Angabe </option>\n          </select>\n        </td>\n      </tr>\n     \n      <th>\n      </th>\n      <td>\n      </td>\n     \n      <tr>\n        <th style=\"text-align: right;\">\n          <label for=\"bdat\">Was ist Ihr Geburtsdatum? </label>\n        </th>\n        <td style=\"text-align: left;\"> \n        <input id=\"bdat\" name=\"f_gebdat\" type=\"date\" required> \n        </td>\n      </tr>\n \n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Leiden Sie an einer neurologischen Erkrankung? \n        </th>\n        <td style=\"text-align: left;\">\n         <select name=\"sick\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Ja </option>\n            <option value=\"no\"> Nein </option>\n         </select>\n         </td>\n      </tr>\n    \n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Stehen Sie zurzeit unter dem Einfluss psychoaktiver Substanzen oder nehmen Sie Medikamente? \n        </th>\n        <td style=\"text-align: left;\">\n         <select name=\"drugs\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"yes\"> Ja </option>\n            <option value=\"no\"> Nein </option>\n         </select>\n         </td>\n      </tr>\n    \n      <th>\n      </th>\n      <td>\n      </td>\n\n\n     <tr>\n        <th style=\"text-align: right;\">\n          Haben Sie eine Sehschwäche? <br>(Wenn Ihre Sehschwäche durch eine Sehhilfe korrigiert wird, geben Sie bitte \"Nein\" an.) \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"sight\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"no\"> Nein </option>\n            <option value=\"yes\"> Ja </option>\n          </select>\n        </td>\n      </tr>\n\n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Leiden Sie unter Hörstörungen (Schwerhörigkeit oder sonstige veränderte Hörwahrnehmung)? <br>(Wenn Ihre Schwerhörigkeit durch eine Hörhilfe korrigiert wird, geben Sie bitte \"Nein\" an.) \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"hearing\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"no\"> Nein </option>\n            <option value=\"yes\"> Ja </option>\n          </select>\n        </td>\n      </tr>\n\n  </table>\n\n<br>\n</main>\n</form>\n<footer style=\"background-color:grey;\">\n<p style=\"text-align:center;\">\n  <button type=\"submit\" form=\"form\">\n     Weiter!\n  </button>\n</p>\n\n</div>\n</footer>",
+      "_tab": "Content",
+      "scrollTop": true
+    },
+    "11": {
+      "id": "11",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Info",
+      "_tab": "Content",
+      "content": "<style> body {background-color:grey} </style>\n\n<header><p><h2>Proband*innen-Information</h2></p>\n<h3> Multisensorische Reize\n </h3>\n</header>\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n    \n<p>Sehr geehrte*r Teilnehmer*in,</p>\n\n<p>das Institut für Psychologie, Abteilung Biologische Psychologie, der Christian-Albrechts-Universität Kiel dankt Ihnen für Ihr Interesse an unserer Studie „Multisensorische Reize“.<p>\n<p>Der folgende Text soll Sie über Ablauf und Besonderheiten dieser Studie, die Wahrung der ärztlichen Schweigepflicht und des Datenschutzes, Ihr Recht auf Wissen und Nichtwissen von Ergebnissen der Untersuchungen und Ihr Recht auf Widerruf der Einwilligungserklärung informieren. Die Teilnahme an dieser Studie ist freiwillig.<p>\n\n<p>Studienleiter ist Prof. Dr. Julian Keil, Institut für Psychologie der Christian-Albrechts-Universität Kiel. Weitere Mitarbeiter des Projektes sind Mathis Kaiser und Georgios Michail (Klinik für Psychiatrie und Psychotherapie, Charité – Universitätsmedizin Berlin).</p>\n\n\n<p> <h4>1. Zweck der Studie </h4> </p>\n\n<p>Die Studie dient dazu, die Grundlagen unserer Wahrnehmung zu untersuchen. Die Arbeitsgruppe von Prof. Dr. Keil beschäftigt sich mit multisensorischer Wahrnehmung, d.h. mit dem Zusammenspiel von visueller und auditorischer Information und der daraus resultierenden komplexen Erfahrung unserer Umwelt.<p> \n  \n<p>Im folgenden Experiment werden Ihnen einfache Symbole und Töne präsentiert. Sie sollen hierbei möglichst rasch per Tastendruck auf die Reize reagieren. Wir interessieren uns hierbei für den Einfluss der gleichzeitigen Darbietung eines Reizes in der einen Sinnesmodalität auf die Wahrnehmung des Reizes in der anderen Sinnesmodalität. Im Rahmen dieser Studie werden keine therapeutischen Möglichkeiten geprüft.</p>\n\n<p> <h4>2. Ablauf der Studie</h4></p>\n<p>Wenn Sie sich zur Teilnahme an unserer Studie entschieden haben, wird Ihnen zunächst der Ablauf und Ihre Aufgabe genau erklärt. Während des Experiments werden Ihnen die zuvor genannten Symbole und Töne dargeboten, zu denen Sie Antworten mittels Tastendruck geben werden. <p>\n  In einem Übungsblock haben Sie Gelegenheit, die Aufgabe zu trainieren, bevor das eigentliche Experiment startet.</p>\n\n<p><h4>3. Aufklärung über das Verhalten während der Studie</h4></p>\n\n<p>Bitte folgen Sie der Aufgabenstellung nach bestem Wissen und Gewissen. Es handelt sich um die Wahrnehmung visueller und auditorischer Stimuli. Es gibt dabei keine richtigen oder falschen Antworten.<p>\n\n<p><h4>4. Nutzen</h4></p>\n\n<p>Durch die Teilnahme an unserer Studie erhalten Sie keinen direkten Nutzen, Sie tragen jedoch hiermit zum wissenschaftlichen Erkenntnisgewinn der Allgemeinheit bei. </p> <p>Psychologiestudenten können sich für die Teilnahme an der Studie beim Versuchsleiter die Unterschrift für eine halbe Versuchspersonenstunde abholen.</p>\n\n<p><h4>5. Mögliche Risiken</h4></p>\n</p>Sie nehmen durch die Teilnahme an unserer Studie keine zusätzlichen Risiken auf sich.</p>\n\n<p><h4>6. Datenschutz</h4></p>\n<p>Durch Ihre Unterschrift auf der Einwilligungserklärung erklären Sie sich damit einverstanden, dass der Studienleiter und die o.g. Mitarbeiter Ihre personenbezogenen Daten zum Zweck der o.g. Studie erheben und verarbeiten dürfen. Die Erhebung der Daten sowie die Weiterverarbeitung der Daten inkl. ihrer Auswertung erfolgt am Institut für Psychologie der Christian-Albrechts-Universität Kiel. Sowohl an der Erhebung als auch an der Weiterverarbeitung und Auswertung der erhobenen Daten sind die zu Beginn dieser Proband*innen-Information aufgeführten Personen von den genannten Institutionen beteiligt. Personenbezogene Daten sind z.B. Ihr Geburtsdatum, Ihr Geschlecht, Daten zu Ihrer physischen und psychischen Gesundheit oder andere Daten, die während Ihrer Teilnahme an der Studie erhoben wurden.</p>\n<p>Der Studienleiter und die o.g. Mitarbeiter werden Ihre personenbezogenen Daten für Zwecke der Verwaltung und Durchführung der Studie sowie für Zwecke der Forschung und statistischen Auswertung verwenden.</p>\n<p>Alle Daten werden in verschlüsselter Form verarbeitet und gespeichert. Somit sind alle erhobenen Daten (wie zum Beispiel Ihre Antworten auf die Fragen am Computer) nicht mit Ihrer Person verbunden. Zur Verschlüsselung versieht der Studienleiter die Daten mit einer Codenummer (Pseudonymisierung der Daten; „Versuchsperson (VP) 1, 2, 3 etc.“). Auf den Codeschlüssel, der es erlaubt, die Daten mit Ihnen in Verbindung zu bringen, haben nur der Studienleiter und die unter Punkt 1 dieser Patienteninformation aufgeführten Mitarbeiter Zugriff. Gemäß der gesetzlichen Aufbewahrungsfrist werden alle erhobenen Daten (s.o.) für die Zeit von maximal 10 Jahren gespeichert (auf einem Passwort-gesicherten PC) und danach vernichtet. Sie können jederzeit der Weiterverarbeitung Ihrer im Rahmen der o.g. Untersuchung erhobenen Daten widersprechen und Ihre vollständige Löschung verlangen.</p>\n<p>Sie haben das Recht auf Auskunft über alle beim Studienleiter vorhandenen personenbezogenen Daten über Sie. Sie haben auch Anrecht auf Korrektur eventueller Ungenauigkeiten in Ihren personenbezogenen Daten. Wenden Sie sich bitte in einem solchen Fall direkt an den Studienleiter. Die Adresse und Telefonnummer des Studienleiters finden Sie unter Punkt 7 dieser Seite.</p>\n<p>Bitte beachten Sie, dass die Ergebnisse der Studie in einer wissenschaftlichen Zeitschrift veröffentlicht werden können, wobei Ihre Identität jedoch anonym bleibt.</p>\n\n<p><h4>7. Fragerecht/Mitteilungspflicht</h4></p>\n<p>Sie haben jederzeit das Recht, die Studienleiter über alle Angelegenheiten, welche die Studie betreffen, zu befragen. Die Fragen richten Sie bitte an den Studienleiter bzw. die Mitarbeiter:</p>\n\nProf. Dr. Julian Keil <br>\nBiologische Psychologie<br>\nOlshausenstraße 62 - R. 306<br>\n24118 Kiel<br>\n<br>\n0431 / 880 - 4872<br>\nkeil@psychologie.uni-kiel.de<br>\n\n<p> <h4>8. Freiwilligkeit der Teilnahme</h4></p>\n<p>Ihre Teilnahme ist freiwillig. Nur wenn Sie zustimmen, können sie in die Studie einbezogen werden. Sie können jederzeit formlos und ohne Angabe von Gründen Ihre Einwilligung in die Teilnahme an der Studie widerrufen. Es entsteht Ihnen daraus kein Nachteil. Gleiches gilt für den Abbruch der Studienteilnahme und den Widerruf der Einwilligung sowie bei einem Widerspruch gegen die Weiterverarbeitung der Daten.<p>\n\n<p><h4>9. Kosten</h4></p>\n<p>Es fallen keine Kosten für Sie an.</p>\n<br>\n</div>\n</main>\n\n<footer style=\"background-color:grey;\"> \n  Weiter mit der Leertaste \n</footer>\n\n\n\n",
+      "scrollTop": true
+    },
+    "12": {
+      "id": "12",
+      "type": "lab.html.Form",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Ende der Studie",
+      "content": "<style> body {background-color:grey} </style>\n\n  <header><h3> <br><br>Vielen Dank für die Teilnahme an unserer Studie!<br><br><h3></header>\n  <main>\n   <form id=\"form\">\n     <p>Falls Sie uns noch etwas zur Studie mitteilen möchten (wie Fragen, Verbesserungsvorschläge oder generelles Feedback), können Sie dafür gern das folgende Freitextfeld nutzen: </p>\n     <br>\n      <input name=\"feedback\" type=\"text\" style=\"width: 50em;\">\n   </form>\n</main>\n<footer style=\"background-color: grey;\">\n      <button type=\"submit\" form=\"form\">\n        Studie schließen\n      </button>\n\n  </footer>\n",
+      "_tab": "Content",
+      "scrollTop": true
+    },
+    "14": {
+      "id": "14",
+      "type": "lab.html.Form",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Consent",
+      "content": "<style> body {background-color:grey} </style>\n\n<header><h3>Einwilligungserklärung in die Studie</h3></header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n<p>Hiermit erkläre ich, </p>\n \n  <form id=\"form\">\n    <table class=\"table-plain\">\n      <tr>\n        <th style=\"text-align: right;\">\n          <label for=\"vname\">1. Buchstabe Ihres Vornamens: </label>\n        </th>\n        <td style=\"text-align: left;\">\n          <input id=\"vname\" name=\"f_vname\" type=\"text\" required> \n        </td>\n      </tr>\n      <tr>\n        <th style=\"text-align: right;\">\n          <label for=\"zname\">1. Buchstabe Ihres Nachnamens: </label>\n        </th>\n        <td style=\"text-align: left;\">\n          <input id=\"zname\" name=\"f_zname\" type=\"text\" required> \n        </td>\n      </tr>\n\n    </table>\n  \n<br>   \n  \n<p>dass ich durch Prof. Dr. Julian Keil (CAU Kiel)</p>\n\nProf. Dr. Julian Keil<br>\nBiologische Psychologie<br>\nOlshausenstraße 62 - R. 306<br>\n24118 Kiel<br>\n0431 / 880 - 4872<br>\nkeil@psychologie.uni-kiel.de<br>\n<br>\n<p>in Form der Patienteninformation vom 04.04.2018 schriftlich über das Wesen, die Bedeutung, Tragweite und Risiken der wissenschaftlichen Untersuchung im Rahmen der Studie „Multisensorische Reize“, die vom Institut für Psychologie der Christian-Albrechts-Universität Kiel sowie der Klinik für Psychiatrie und Psychotherapie der Charité – Universitätsmedizin in Berlin durchgeführt wird, informiert wurde.</p>\n<p>Ich habe insbesondere die mir vorgelegte Patienteninformation vom 04.04.2018 verstanden.</p>\n\n<p>Ich bin bereit, an der wissenschaftlichen Untersuchung im Rahmen der oben genannten Studie teilzunehmen.</p>\n\n<p>Mir ist bekannt, dass ich meine Einwilligung jederzeit ohne Angabe von Gründen und ohne nachteilige Folgen für mich zurückziehen und einer Weiterverarbeitung meiner Daten jederzeit widersprechen kann.</p>\n\n<p><strong>Einwilligungserklärung zur Datenverarbeitung<br>\nIch willige darin ein, dass die wissenschaftliche Arbeitsgruppe von Prof. Dr. Julian Keil, Institut für Psychologie, Abteilung Biologische Psychologie der Christian-Albrechts-Universität Kiel, mich betreffende Daten im Rahmen und zum Zweck des oben genannten Forschungsvorhabens verarbeiten.\nIch willige darin ein, dass meine im Rahmen der oben genannten Studie im Institut für Psychologie, Abteilung Biologische Psychologie der Christian-Albrechts-Universität Kiel sowie in der kooperierenden Klinik für Psychiatrie und Psychotherapie der Charité – Universitätsmedizin Berlin verschlüsselt gespeichert und die Studienergebnisse anonymisiert veröffentlicht werden.</strong></p>\n\n  <br>\n<br>\n  </form>\n  </main>\n\n<footer style=\"background-color:grey;\">\nBitte geben Sie uns nun Ihr Einverständnis zur Teilnahme:<br><br>\n\n<input name=„agreement“ type =\"checkbox\" required form=\"form\"> Ja, ich gebe mein Einverständnis.\n<br>\n<button type=\"submit\" form=\"form\">\n  Weiter!\n</button>\n</footer>\n</div>\n\n",
+      "_tab": "Content",
+      "scrollTop": true
+    },
+    "16": {
+      "id": "16",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Instructions",
+      "_tab": "Content",
+      "scrollTop": true,
+      "content": "<style> body {background-color:grey} </style>\n\n<header><h3>Vielen Dank!</h3></header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n\n<p>Im nun folgenden Experiment wird Ihnen in der Mitte des Bildschirms ein Kreuz präsentiert. Unterhalb des Kreuzes wird in unregelmäßigen Abständen eine Reihe von schnell aufleuchtenden weißen Punkten präsentiert. Außerdem werden Sie ebenfalls in unregelmäßigen Abständen Klickgeräusche hören. Die Punkte und Klicks werden entweder einzeln oder zusammen auftreten.</p> \n<p>Ihre Aufgabe wird dabei sein, so schnell wie möglich die M-Taste zu drücken, wenn Sie entweder einen hellen Punkt, ein Klickgeräusch oder Punkt und Geräusch gleichzeitig wahrgenommen haben. \n<p>Das Experiment ist in insgesamt vier Blöcke geteilt, einen kurzen Übungsblock und drei etwas längere Blöcke. Zwischen den Blöcken können Sie jeweils eine Pause machen. Die drei längeren Blöcke dauern je maximal 6 Minuten. Sie können die Testung jederzeit abbrechen, ohne dass Ihnen dadurch Nachteile entstehen. </p>\n<p>Bitte setzen Sie sich in Armlänge Entfernung zum Bildschirm. Schauen Sie bitte während des Experiments immer auf das Kreuz. Bitte versuchen Sie während des Experiments Ihren Finger immer im gleichen Abstand zur M-Taste zu halten.</p>\n<br>\n</main>\n<footer style=\"background-color:grey;\">\n<p >  Weiter mit der Leertaste </p>\n</footer>"
+    },
+    "27": {
+      "id": "27",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Enter"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Pause 2",
+      "_tab": "Content",
+      "content": "<header> <h3>Vielen Dank!</h3> </header>\n<main>\n<p>Sie können nun eine kurze Pause machen, bevor der zweite der drei längeren Blöcke beginnt.</p> <p>Zur Erinnerung: Bitte drücken Sie die Leertaste, wenn sie einen hellen Punkt, einen Ton oder Ton und Punkt gemeinsam wahrnehmen. </p>\n</main>\n<footer style=\"background-color: grey;\">\n<p>Drücken Sie bitte Enter, um zum nächsten Block zu gelangen.</p>\n</footer>",
+      "scrollTop": true
+    },
+    "34": {
+      "id": "34",
+      "type": "lab.html.Form",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "abschließende Fragen",
+      "content": "<style> body {background-color:grey} </style>\n\n<header>\n  <h3>Vielen Dank!</h3>\n</header>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n<div class=\"w-m text-justify\">\n\n<p> Bitte beantworten Sie uns nun noch einige abschließende Fragen zum Experiment. </p>\n  <form id=\"form\">\n    <table class=\"table-plain\">      \n \n      <tr>\n        <th style=\"text-align: right;\">\n          Konnten Sie während des Experiments die in den Instruktionen beschriebenen hellen Punkte sehen? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"visual\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"ja\"> Ja </option>\n            <option value=\"nein\"> Nein </option>\n          </select>\n        </td>\n \n      </tr>\n\n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Konnten Sie während des Experiments die in den Instruktionen beschriebenen Töne hören? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"auditory\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"ja\"> Ja </option>\n            <option value=\"nein\"> Nein </option>\n          </select>\n        </td>\n \n      </tr>\n\n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          Wenn der Ton und der helle Punkt gleichzeitig abgespielt wurden, haben Sie sie auch als gleichzeitig wahrgenommen oder gab es eine zeitliche Verzögerung zwischen den beiden? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"Verzögerung\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"verzögert\"> Es gab eine Verzögerung. </option>\n            <option value=\"gleichzeitig\"> Sie waren gleichzeitig. </option>\n          </select>\n        </td>\n      </tr>\n\n      <th>\n      </th>\n      <td>\n      </td>\n\n      <tr>\n        <th style=\"text-align: right;\">\n          In welchem Browser haben Sie die Studie gerade geöffnet? \n        </th>\n        <td style=\"text-align: left;\">\n          <select name=\"Browser\" required>\n            <option value=\"\" selected> ------ </option> \n            <option value=\"Chrome\"> Google Chrome </option>\n            <option value=\"Firefox\"> Mozilla Firefox </option>\n            <option value=\"Safari\"> Safari </option>\n            <option value=\"Internet Explorer\"> Internet Explorer </option>\n            <option value=\"Opera\"> Opera </option>\n            <option value=\"sonstiger\"> sonstiger Browser </option>\n          </select>\n        </td>\n \n      </tr>\n    </table>\n  </form>\n</main>\n<footer style=\"background-color: grey;\">\n      <button type=\"submit\" form=\"form\">\n        Weiter!\n      </button>\n</footer>\n</div>\n"
+    },
+    "61": {
+      "id": "61",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Enter"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Pause 1",
+      "_tab": "Content",
+      "content": "<header> <h3>Vielen Dank!</h3> </header>\n<main>\n<p>Sie können nun eine kurze Pause machen, bevor der erste der drei längeren Blöcke des Experiments beginnt. Nach jedem dieser Blöcke folgt wieder eine Pause. </p> <p>Zur Erinnerung: Bitte drücken Sie die Leertaste, wenn sie einen hellen Punkt, einen Ton oder Ton und Punkt gemeinsam wahrnehmen. </p>\n</main>\n<footer style=\"background-color: grey;\">\n<p>Drücken Sie bitte Enter, um zum nächsten Block zu gelangen.</p>\n</footer>",
+      "scrollTop": true
+    },
+    "62": {
+      "id": "62",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Space"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "run",
+              "code": "document.addEventListener('keydown', function(e) {\n  if (e.keyCode == 65) {\n    document.getElementById('audio').play();\n  }\n});"
+            }
+          ]
+        ]
+      },
+      "title": "Sound Instructions",
+      "content": "<style> body {background-color:grey} </style>\n\n<audio id=\"audio\" controls style=\"display:none\">\n  <source src=\"http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3\"> \n</audio>\n\n<main class=\"content-vertical-center content-horizontal-center\">\n  <div class=\"w-m text-justify\">\n <p> Stellen Sie bitte nun bitte sicher, dass Ihre Lautsprecher eingeschaltet sind.</p>\n <p> Sind Ihre Lautsprecher eingeschaltet, drücken Sie bitte die Taste [a], um einen Ton abzuspielen.</p> <p> Stellen Sie die Lautstärke ihrer Lautsprecher bitte so ein, dass der Ton für Sie gut wahrnehmbar, aber nicht zu laut ist. </p>\n <br>\n </main>\n\n<footer style=\"background-color:grey;\">\n   <p>Der Übungsblock startet, sobald Sie die Leertaste drücken.</p> <p> Viel Spaß!</p>\n </footer>\n </div>",
+      "_tab": "Content"
+    },
+    "68": {
+      "id": "68",
+      "type": "lab.flow.Loop",
+      "children": [
+        "75"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "repetitions",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1"
+          ],
+          [
+            "2"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4"
+          ],
+          [
+            "5"
+          ],
+          [
+            "6"
+          ],
+          [
+            "7"
+          ],
+          [
+            "8"
+          ],
+          [
+            "9"
+          ],
+          [
+            "10"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "4. Block, 90 Stimuli"
+    },
+    "75": {
+      "id": "75",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "85"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence"
+    },
+    "85": {
+      "id": "85",
+      "type": "lab.flow.Loop",
+      "children": [
+        "97"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "noise",
+            "type": "string"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "name": "timeout",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1",
+            "grey",
+            "A",
+            "1500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "1500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "1500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "2500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "2500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "2500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "3500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "3500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "3500"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "Loop, 3 conditions x 3 timeouts",
+      "sample": {
+        "replace": true
+      }
+    },
+    "97": {
+      "id": "97",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "98",
+        "107",
+        "133"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence",
+      "_tab": "Content"
+    },
+    "98": {
+      "id": "98",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "inter-stimulus interval",
+      "_tab": "Content",
+      "timeout": "${parameters.timeout}",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "99": {
+      "id": "99",
+      "type": "lab.flow.Loop",
+      "children": [
+        "100"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "repetitions",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1"
+          ],
+          [
+            "2"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "1. Block (Trial), 18 Stimuli",
+      "_tab": "Content"
+    },
+    "100": {
+      "id": "100",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "101"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence"
+    },
+    "101": {
+      "id": "101",
+      "type": "lab.flow.Loop",
+      "children": [
+        "102"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "noise",
+            "type": "string"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "name": "timeout",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1",
+            "grey",
+            "A",
+            "1500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "1500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "1500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "2500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "2500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "2500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "3500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "3500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "3500"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "Loop, 3 conditions x 3 timeouts",
+      "sample": {
+        "replace": true
+      }
+    },
+    "102": {
+      "id": "102",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "103",
+        "104",
+        "105"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence",
+      "_tab": "Content"
+    },
+    "103": {
+      "id": "103",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "inter-stimulus interval",
+      "_tab": "Content",
+      "timeout": "${parameters.timeout}",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "104": {
+      "id": "104",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3'\nsound.volume = this.aggregateParameters.noise\nthis.internals.sound = sound\n"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "title": "stimulus ",
+      "_tab": "Content",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "timeout": "20"
+    },
+    "105": {
+      "id": "105",
+      "type": "lab.html.Screen",
+      "responses": {
+        "rows": [
+          [
+            "react",
+            "keydown",
+            "",
+            "m"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "reaction",
+      "_tab": "Content",
+      "timeout": "1500",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "106": {
+      "id": "106",
+      "type": "lab.flow.Loop",
+      "children": [
+        "108"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "repetitions",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1"
+          ],
+          [
+            "2"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4"
+          ],
+          [
+            "5"
+          ],
+          [
+            "6"
+          ],
+          [
+            "7"
+          ],
+          [
+            "8"
+          ],
+          [
+            "9"
+          ],
+          [
+            "10"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "2. Block, 90 Stimuli"
+    },
+    "107": {
+      "id": "107",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3'\nsound.volume = this.aggregateParameters.noise\nthis.internals.sound = sound\n"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "title": "stimulus ",
+      "_tab": "Content",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "timeout": "20"
+    },
+    "108": {
+      "id": "108",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "115"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence"
+    },
+    "115": {
+      "id": "115",
+      "type": "lab.flow.Loop",
+      "children": [
+        "122"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "noise",
+            "type": "string"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "name": "timeout",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1",
+            "grey",
+            "A",
+            "1500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "1500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "1500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "2500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "2500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "2500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "3500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "3500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "3500"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "Loop, 3 conditions x 3 timeouts",
+      "sample": {
+        "replace": true
+      }
+    },
+    "122": {
+      "id": "122",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "123",
+        "124",
+        "125"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence",
+      "_tab": "Content"
+    },
+    "123": {
+      "id": "123",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "inter-stimulus interval",
+      "_tab": "Content",
+      "timeout": "${parameters.timeout}",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "124": {
+      "id": "124",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3'\nsound.volume = this.aggregateParameters.noise\nthis.internals.sound = sound\n"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "title": "stimulus ",
+      "_tab": "Content",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "timeout": "20"
+    },
+    "125": {
+      "id": "125",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "react",
+            "keydown",
+            "",
+            "m"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "reaction",
+      "_tab": "Content",
+      "timeout": "1500",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "126": {
+      "id": "126",
+      "type": "lab.flow.Loop",
+      "children": [
+        "127"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "repetitions",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1"
+          ],
+          [
+            "2"
+          ],
+          [
+            "3"
+          ],
+          [
+            "4"
+          ],
+          [
+            "5"
+          ],
+          [
+            "6"
+          ],
+          [
+            "7"
+          ],
+          [
+            "8"
+          ],
+          [
+            "9"
+          ],
+          [
+            "10"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "3. Block, 90 Stimuli"
+    },
+    "127": {
+      "id": "127",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "128"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence"
+    },
+    "128": {
+      "id": "128",
+      "type": "lab.flow.Loop",
+      "children": [
+        "129"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "templateParameters": {
+        "columns": [
+          {
+            "name": "noise",
+            "type": "string"
+          },
+          {
+            "name": "color",
+            "type": "string"
+          },
+          {
+            "name": "label",
+            "type": "string"
+          },
+          {
+            "name": "timeout",
+            "type": "string"
+          }
+        ],
+        "rows": [
+          [
+            "1",
+            "grey",
+            "A",
+            "1500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "1500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "1500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "2500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "2500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "2500"
+          ],
+          [
+            "1",
+            "grey",
+            "A",
+            "3500"
+          ],
+          [
+            "0",
+            "white",
+            "V",
+            "3500"
+          ],
+          [
+            "1",
+            "white",
+            "VA",
+            "3500"
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "shuffle": true,
+      "title": "Loop, 3 conditions x 3 timeouts",
+      "sample": {
+        "replace": true
+      }
+    },
+    "129": {
+      "id": "129",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "130",
+        "131",
+        "132"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Sequence",
+      "_tab": "Content"
+    },
+    "130": {
+      "id": "130",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "inter-stimulus interval",
+      "_tab": "Content",
+      "timeout": "${parameters.timeout}",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "131": {
+      "id": "131",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "prep",
+              "message": "before:prepare",
+              "code": "const sound = document.createElement('audio')\nsound.src = 'http://www.biopsych.uni-kiel.de/experiments/Sounds/10ms1000Hz.mp3'\nsound.volume = this.aggregateParameters.noise\nthis.internals.sound = sound\n"
+            }
+          ],
+          [
+            {
+              "title": "play",
+              "message": "run",
+              "code": "this.internals.sound.play()"
+            }
+          ]
+        ]
+      },
+      "title": "stimulus ",
+      "_tab": "Content",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>\n<div style=\"height: 50px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div\n      style=\"color: ${ parameters.color }; font-size: 3rem\"\n    >\n      ⬤\n    </div>\n  </main>\n</div>\n",
+      "timeout": "20"
+    },
+    "132": {
+      "id": "132",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "react",
+            "keydown",
+            "",
+            "m"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "reaction",
+      "_tab": "Content",
+      "timeout": "1500",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "133": {
+      "id": "133",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "react",
+            "keydown",
+            "",
+            "m"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "reaction",
+      "_tab": "Content",
+      "timeout": "1500",
+      "content": "<style> body {background-color:grey} </style>\n\n<div style=\"height: 200px\">\n  </div>\n<div class=\"row\">\n  <main class=\"content-vertical-center content-horizontal-center\">\n    <div style=\"font-size: 3.5rem\">\n      +\n    </div>\n  </main>\n</div>"
+    },
+    "140": {
+      "id": "140",
+      "type": "lab.html.Screen",
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "responses": {
+        "rows": [
+          [
+            "Weiter",
+            "keypress",
+            "",
+            "Enter"
+          ]
+        ]
+      },
+      "messageHandlers": {
+        "rows": [
+          [
+            {
+              "title": "",
+              "message": "",
+              "code": ""
+            }
+          ]
+        ]
+      },
+      "title": "Pause 3",
+      "_tab": "Content",
+      "content": "<header> <h3>Vielen Dank!</h3> </header>\n<main>\n<p>Sie können nun eine kurze Pause machen, bevor der letzte der drei längeren Blöcke beginnt.</p> <p>Zur Erinnerung: Bitte drücken Sie die Leertaste, wenn sie einen hellen Punkt, einen Ton oder Ton und Punkt gemeinsam wahrnehmen. </p>\n</main>\n<footer style=\"background-color: grey;\">\n<p>Drücken Sie bitte Enter, um zum letzten Block zu gelangen.</p>\n</footer>",
+      "scrollTop": true
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "11",
+        "14",
+        "7",
+        "16",
+        "62",
+        "99",
+        "61",
+        "106",
+        "27",
+        "126",
+        "140",
+        "68",
+        "1",
+        "34",
+        "12"
+      ],
+      "parameters": {
+        "rows": [
+          [
+            {
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        ]
+      },
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "MultiRace",
+        "description": "Auditory, Visual and Audiovisual for Multisensory Race Model",
+        "repository": "",
+        "contributors": "Julian Keil\nMerle Schuckart"
+      }
+    }
+  },
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20lab.js%20library%20and%20default%20styles%20--%3E%0A%20%20%3Cscript%20src%3D%22lib%2Flab.js%22%3E%3C%2Fscript%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22lib%2Flab.css%22%3E%0A%20%20%3C!--%20study%20code%20and%20styles%20--%3E%0A%20%20%3Cscript%20defer%20src%3D%22script.js%22%3E%3C%2Fscript%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22style.css%22%3E%0A%3C%2Fhead%3E%0A%3Cbody%20style%3D%22background-color%3Agrey%3B%22%3E%0A%0A%20%20%3C!--%20If%20you'd%20rather%20have%20a%20container%20with%20a%20fixed%20width%0A%20%20%20%20%20%20%20and%20variable%20height%2C%20try%20removing%20the%20fullscreen%20class%20below%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "permanent": true
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F",
+        "permanent": true
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      }
+    }
+  }
+}
