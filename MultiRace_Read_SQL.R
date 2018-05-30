@@ -9,10 +9,10 @@ library("DBI")
 library("data.table")
 
 # 1. Set Working Directory
-setwd('~/Documents/Arbeit/lab_js/Experiments/MultiRace/Data')
+setwd('E:/LabJS/Experiments/MultiRace/Live/data')
 
 # 2. Connect to Database
-con = dbConnect(dbDriver("SQLite"), dbname="data_20180524.sqlite")
+con = dbConnect(dbDriver("SQLite"), dbname="data_20180529.sqlite")
 
 # 3. Get a List of all tables
 alltables = dbListTables(con)
@@ -20,6 +20,8 @@ alltables = dbListTables(con)
 # 3. Select Column
 p1 <- dbSendQuery(con, 'SELECT data FROM labjs')
 data <- fetch(p1, n = -1)
+p2 <- dbSendQuery(con, 'SELECT session FROM labjs')
+session <- fetch(p2, n = -1)
 dbDisconnect(con)
 
 # 4. Loop through messy character data
@@ -39,6 +41,7 @@ for (i in 1:nrow(data)) {
 	# First Intro Screen
 	if (sp4[1]=="meta") {
 		j = j+1
+		Meta$Session[j]<-session[i,]
 		Meta$PC[j]<-sp4[9] # What kind of computer was used? 
 		Meta$ht[j]<-sp4[27] # How high was the experiment display
 		Meta$wd[j]<-sp4[29] # How wide was the experiment display
@@ -69,12 +72,12 @@ for (i in 1:nrow(data)) {
 	}
 }
 
-# 4.2. Now read in the data between breaks
+# 4.2. Now read in the data for one session
 alldat <- list()
 for (v in 1:length(starti)) {
 	# Define where the actual data starts
 	start <- starti[v]+1
-	stop  <- starti[v+1]-1
+	stop  <- nrow(data)
 	
 	# Account for the case of end-of-file
 	if (is.na(stop)){
@@ -82,12 +85,12 @@ for (v in 1:length(starti)) {
 	}
 	
 	# Check again if the new start value is after the end of file
-	if (start>nrow(data)){
+	if (!is.na(start) & start>nrow(data)){
 		tmp<-data.frame()
 	}	
 	
 	# If all is good, go ahead and count responses
-	if (start<nrow(data)){
+	if (!is.na(start) & start<nrow(data)){
 		# Preallocate Variables
 		resp = NULL
 		labl = NULL
@@ -96,6 +99,8 @@ for (v in 1:length(starti)) {
 	
 		# Actually read in the data	
 		for (i in start:stop) {
+		  # Check if we are within one session
+		  if (session[i,]==Meta$Session[v]){
 			# Unwrap the text data
 			x<-gsub('"|[{]|[}]','', data[i,])
 			y<-unlist(strsplit(x,"[,]"))
@@ -109,6 +114,7 @@ for (v in 1:length(starti)) {
 				RT[j]<-as.numeric(z[26]) # Reaction Time
 			}
 			tmp<-data.frame(labl,resp,RT)
+		  }
 		}
 	}
 	
@@ -159,5 +165,21 @@ error.bar<-function(x,y,upper,lower=upper,length=0.1) {
 	arrows(x,y+upper,x,y-lower,angle=90,code=3,length=length)
 }
 
-barx<-barplot(c(mean(A_RT),mean(V_RT),mean(AV_RT)),ylim=c(0,400),names.arg=c("Audio","Visual","Audiovisual"),ylab="Mean RT")
+barx<-barplot(c(mean(A_RT),mean(V_RT),mean(AV_RT)),ylim=c(0,500),names.arg=c("Audio","Visual","Audiovisual"),ylab="Mean RT")
 error.bar(barx,c(mean(A_RT),mean(V_RT),mean(AV_RT)), c(sd(A_RT)/sqrt(length(A_RT)),sd(V_RT)/sqrt(length(V_RT)),sd(AV_RT)/sqrt(length(AV_RT))))
+
+# 7. Anova
+sub_v <- 1:length(A_RT)
+cond <- rep(1,length(A_RT))
+indat <- rbind(cbind(A_RT,cond*1,sub_v),cbind(V_RT,cond*2,sub_v),cbind(AV_RT,cond*3,sub_v))
+colnames(indat)[2] <- "cond"
+indat <- as.data.frame(indat)
+indat$cond <- as.factor(indat$cond)
+indat$sub_v <- as.factor(indat$sub_v)
+
+aov1 <- aov(A_RT~cond+Error(sub_v/cond),data = indat)
+summary(aov1)    
+# 7.1 Post-Hoch T-Tests
+A_V <- t.test(A_RT,V_RT,paired=TRUE,var.equal=TRUE)
+A_AV <- t.test(A_RT,AV_RT,paired=TRUE,var.equal=TRUE)
+AV_V <- t.test(AV_RT,V_RT,paired=TRUE,var.equal=TRUE)
