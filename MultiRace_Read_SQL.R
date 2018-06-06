@@ -7,12 +7,13 @@
 library("RSQLite")
 library("DBI")
 library("data.table")
+library("ggplot2")
 
 # 1. Set Working Directory
 setwd('E:/LabJS/Experiments/MultiRace/Live/data')
 
 # 2. Connect to Database
-con = dbConnect(dbDriver("SQLite"), dbname="data_20180529.sqlite")
+con = dbConnect(dbDriver("SQLite"), dbname="data_20180605.sqlite")
 
 # 3. Get a List of all tables
 alltables = dbListTables(con)
@@ -70,6 +71,10 @@ for (i in 1:nrow(data)) {
 		Meta$fb_del[j]<-sp4[6] # Was there a delay between stimuli
 		Meta$fb_brow[j]<-sp4[8] # What kind of browser was used
 	}
+	# Open Feedback Question
+	if (sp4[1]=="feedback") {
+	  Meta$fb_open[j]<-sp4[2] # Open Text for Feedback
+	}
 }
 
 # 4.2. Now read in the data for one session
@@ -122,6 +127,7 @@ for (v in 1:length(starti)) {
 	alldat<-c(alldat,list(tmp))
 }
 
+# Now clean up the dataset
 # 4.2.1. Remove empty elements
 iszero = NULL
 # Find non-zero datasets
@@ -146,17 +152,43 @@ for (i in 1:length(Meta)){
 	Meta[[i]]<-Meta[[i]][isincomp]
 }
 
+# 4.2.3. Remove sets with negative values
+isneg = NULL
+# Find datasets with negative values
+for (v in 1:length(alldat)){
+  isneg[v]<-alldat[[v]][1,3]>0
+}
+# Keep only datasets with positive values
+alldat<-alldat[isneg]
+for (i in 1:length(Meta)){
+  Meta[[i]]<-Meta[[i]][isneg]
+}
+
+# 4.2.3. Remove dulicated rows
+dups<-!duplicated(alldat)
+alldat<-alldat[dups]
+for (i in 1:length(Meta)){
+  Meta[[i]]<-Meta[[i]][dups]
+}
+
 # 5. Compute response time
-A_RT = NA
-V_RT = NA
-AV_RT = NA
+A_RT <- vector("list", length(alldat))
+V_RT <- vector("list", length(alldat))
+AV_RT <- vector("list", length(alldat))
+
+A_Mean <- NA
+V_Mean <- NA
+AV_Mean <- NA
 
 for (v in 1:length(alldat)){
 	tmp<-alldat[[v]]
+	A_RT[[v]]<-(tmp[tmp$labl=="A",]$RT)
+	V_RT[[v]]<-(tmp[tmp$labl=="V",]$RT)
+	AV_RT[[v]]<-(tmp[tmp$labl=="VA",]$RT)
 	
-	A_RT[v]<-mean(tmp[tmp$labl=="A",]$RT)
-	V_RT[v]<-mean(tmp[tmp$labl=="V",]$RT)
-	AV_RT[v]<-mean(tmp[tmp$labl=="VA",]$RT)
+	A_Mean[v]<-mean(tmp[tmp$labl=="A",]$RT)
+	V_Mean[v]<-mean(tmp[tmp$labl=="V",]$RT)
+	AV_Mean[v]<-mean(tmp[tmp$labl=="VA",]$RT)
 }
 
 # 6. Plot
@@ -165,21 +197,63 @@ error.bar<-function(x,y,upper,lower=upper,length=0.1) {
 	arrows(x,y+upper,x,y-lower,angle=90,code=3,length=length)
 }
 
-barx<-barplot(c(mean(A_RT),mean(V_RT),mean(AV_RT)),ylim=c(0,500),names.arg=c("Audio","Visual","Audiovisual"),ylab="Mean RT")
-error.bar(barx,c(mean(A_RT),mean(V_RT),mean(AV_RT)), c(sd(A_RT)/sqrt(length(A_RT)),sd(V_RT)/sqrt(length(V_RT)),sd(AV_RT)/sqrt(length(AV_RT))))
+barx<-barplot(c(mean(A_Mean),mean(V_Mean),mean(AV_Mean)),ylim=c(0,550),names.arg=c("Audio","Visual","Audiovisual"),ylab="Mean RT")
+error.bar(barx,c(mean(A_Mean),mean(V_Mean),mean(AV_Mean)), c(sd(A_Mean)/sqrt(length(A_Mean)),sd(V_Mean)/sqrt(length(V_Mean)),sd(AV_Mean)/sqrt(length(AV_Mean))))
 
 # 7. Anova
-sub_v <- 1:length(A_RT)
-cond <- rep(1,length(A_RT))
-indat <- rbind(cbind(A_RT,cond*1,sub_v),cbind(V_RT,cond*2,sub_v),cbind(AV_RT,cond*3,sub_v))
+sub_v <- 1:length(A_Mean)
+cond <- rep(1,length(A_Mean))
+indat <- rbind(cbind(A_Mean,cond*1,sub_v),cbind(V_Mean,cond*2,sub_v),cbind(AV_Mean,cond*3,sub_v))
 colnames(indat)[2] <- "cond"
 indat <- as.data.frame(indat)
 indat$cond <- as.factor(indat$cond)
 indat$sub_v <- as.factor(indat$sub_v)
 
-aov1 <- aov(A_RT~cond+Error(sub_v/cond),data = indat)
+aov1 <- aov(A_Mean~cond+Error(sub_v/cond),data = indat)
 summary(aov1)    
 # 7.1 Post-Hoch T-Tests
-A_V <- t.test(A_RT,V_RT,paired=TRUE,var.equal=TRUE)
-A_AV <- t.test(A_RT,AV_RT,paired=TRUE,var.equal=TRUE)
-AV_V <- t.test(AV_RT,V_RT,paired=TRUE,var.equal=TRUE)
+A_V <- t.test(A_Mean,V_Mean,paired=TRUE,var.equal=TRUE)
+A_AV <- t.test(A_Mean,AV_Mean,paired=TRUE,var.equal=TRUE)
+AV_V <- t.test(AV_Mean,V_Mean,paired=TRUE,var.equal=TRUE)
+
+# 8. Race Model
+source('GetPercentile.R')
+source('ties.R')
+source('cdf.Ulrich.R')
+source('probSpace.R')
+
+A_p <- vector("list", length(A_Mean))
+V_p <- vector("list", length(V_Mean))
+AV_p <- vector("list", length(AV_Mean))
+B_p <- vector("list", length(A_Mean))
+
+psq <- probSpace(10); psq
+
+for (v in 1:length(A_Mean)) {
+  dfx <- ties(A_RT[[v]])
+  dfy <- ties(V_RT[[v]])
+  dfz <- ties(AV_RT[[v]])
+  tmax <- max(A_RT[[v]],V_RT[[v]],AV_RT[[v]])
+  
+  gx <- cdf.ulrich(data=dfx, maximum=tmax)
+  gy <- cdf.ulrich(data=dfy, maximum=tmax)
+  gz <- cdf.ulrich(data=dfz, maximum=tmax)
+  
+  b <- gx + gy
+  A_p[[v]] <- GetPercentile(psq, gx, tmax);
+  V_p[[v]] <- GetPercentile(psq, gy, tmax);
+  AV_p[[v]] <- GetPercentile(psq, gz, tmax);
+  B_p[[v]] <- GetPercentile(psq, b, tmax);
+}
+
+
+# Plot
+gdf <- data.frame(RT =c(xp,yp,zp,bp), Probability =rep(psq, 4),
+                  Condition =rep(c("gx(t)", "gy(t)","gz(t)","gx(t)+gy(t)"), each=length(xp)))
+panelf <- ggplot(gdf, aes(x = RT, y = Probability, group=Condition,
+                          colour=Condition, shape=Condition)) + 
+  geom_point() + geom_line() 
+panelf + coord_cartesian(xlim = c(200, 500), ylim=c(-.01,1.01)) +
+  theme(legend.position= c(.85, .20),  
+        legend.title = element_text(size=12),
+        legend.text = element_text(size=12))
