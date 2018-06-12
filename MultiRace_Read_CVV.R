@@ -180,7 +180,7 @@ for (v in 1:length(A_Mean)) {
 
 
 # Plot
-gdf <- data.frame(RT =c(xp,yp,zp,bp), Probability =rep(psq, 4),
+gdf <- data.frame(RT =c(mean(A_p),mean(V_p),mean(AV_p),mean(B_p)), Probability =rep(psq, 4),
                   Condition =rep(c("gx(t)", "gy(t)","gz(t)","gx(t)+gy(t)"), each=length(xp)))
 panelf <- ggplot(gdf, aes(x = RT, y = Probability, group=Condition,
                           colour=Condition, shape=Condition)) + 
