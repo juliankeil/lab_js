@@ -5,7 +5,7 @@
 
 # 0. Load packages
 library("data.table")
-
+library("ggplot2")
 # 1. Set Working Directory
 setwd('~/Documents/Arbeit/lab_js/Experiments/MultiRace/Data/Offline')
 
@@ -177,11 +177,18 @@ for (v in 1:length(A_Mean)) {
   AV_p[[v]] <- GetPercentile(psq, gz, tmax);
   B_p[[v]] <- GetPercentile(psq, b, tmax);
 }
-
+tmp <- as.data.frame(A_p)
+meanA_p <- rowMeans(as.matrix(tmp))
+tmp <- as.data.frame(V_p)
+meanV_p <- rowMeans(as.matrix(tmp))
+tmp <- as.data.frame(AV_p)
+meanAV_p <- rowMeans(as.matrix(tmp))
+tmp <- as.data.frame(B_p)
+meanB_p <- rowMeans(as.matrix(tmp))
 
 # Plot
-gdf <- data.frame(RT =c(mean(A_p),mean(V_p),mean(AV_p),mean(B_p)), Probability =rep(psq, 4),
-                  Condition =rep(c("gx(t)", "gy(t)","gz(t)","gx(t)+gy(t)"), each=length(xp)))
+gdf <- data.frame(RT =c(meanA_p,meanV_p,meanAV_p,meanB_p), Probability =rep(psq, 4),
+                  Condition =rep(c("gx(t)", "gy(t)","gz(t)","gx(t)+gy(t)"), each=length(meanA_p)))
 panelf <- ggplot(gdf, aes(x = RT, y = Probability, group=Condition,
                           colour=Condition, shape=Condition)) + 
   geom_point() + geom_line() 
