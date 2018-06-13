@@ -146,6 +146,7 @@ isincomp = NULL
 for (v in 1:length(alldat)){
 	isincomp[v]<-nrow(alldat[[v]])>30
 }
+
 # Keep only datasets with more than 30 trials
 alldat<-alldat[isincomp]
 for (i in 1:length(Meta)){
@@ -158,6 +159,7 @@ isneg = NULL
 for (v in 1:length(alldat)){
   isneg[v]<-alldat[[v]][1,3]>0
 }
+
 # Keep only datasets with positive values
 alldat<-alldat[isneg]
 for (i in 1:length(Meta)){
@@ -245,11 +247,18 @@ for (v in 1:length(A_Mean)) {
   AV_p[[v]] <- GetPercentile(psq, gz, tmax);
   B_p[[v]] <- GetPercentile(psq, b, tmax);
 }
-
+tmp <- as.data.frame(A_p)
+meanA_p <- rowMeans(as.matrix(tmp))
+tmp <- as.data.frame(V_p)
+meanV_p <- rowMeans(as.matrix(tmp))
+tmp <- as.data.frame(AV_p)
+meanAV_p <- rowMeans(as.matrix(tmp))
+tmp <- as.data.frame(B_p)
+meanB_p <- rowMeans(as.matrix(tmp))
 
 # Plot
-gdf <- data.frame(RT =c(xp,yp,zp,bp), Probability =rep(psq, 4),
-                  Condition =rep(c("gx(t)", "gy(t)","gz(t)","gx(t)+gy(t)"), each=length(xp)))
+gdf <- data.frame(RT =c(meanA_p,meanV_p,meanAV_p,meanB_p), Probability =rep(psq, 4),
+                  Condition =rep(c("gx(t)", "gy(t)","gz(t)","gx(t)+gy(t)"), each=length(meanA_p)))
 panelf <- ggplot(gdf, aes(x = RT, y = Probability, group=Condition,
                           colour=Condition, shape=Condition)) + 
   geom_point() + geom_line() 
